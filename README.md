@@ -1,4 +1,5 @@
 # redis
 
-TODO: Enter the cookbook description here.
+Chef cookbook to install and configure a redis server
+Following: https://redis.io/topics/quickstart
 
