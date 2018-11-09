@@ -73,13 +73,13 @@ action :install do
   end
 
   file new_resource.init_path do
-    content init_script(new_resource.init_src, new_resource.port)
+    content( lazy {init_script(new_resource.init_src, new_resource.port) })
     mode 0755
     sensitive true
   end
 
   file new_resource.conf_path do
-    content conf_file(new_resource.conf_src, new_resource.port)
+    content( lazy { conf_file(new_resource.conf_src, new_resource.port)})
     sensitive true
   end
 
